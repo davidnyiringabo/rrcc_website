@@ -53,10 +53,12 @@ const ActivitiesPage = ()=>{
                 </div>
             </div>
 
-            <div>
-                <h4>You just took a step towards making a positive impact.</h4>
-                <p>Explore our various programs and learn about our volunteer opportunities, and discover how you can contribute to saving the lives of many.</p>
-                <p></p>
+            <div className="my-20 w-full flex flex-col items-center">
+                <h4 className="text-[140%] font-bold text-[#00A106]">You just took a step towards making a positive impact.</h4>
+                <p className="text-[120%] w-[40%] text-center my-6 font-light text-[#000000cb]">Explore our various programs and learn about our volunteer opportunities, and discover how you can contribute to saving the lives of many.</p>
+                <p className="text-[120%] w-[40%] text-center my-6 font-light text-[#000000cb]">Explore our various programs and learn about our volunteer opportunities, and discover how you can contribute to saving the lives of many.</p>
+                <h4 className="text-[140%] font-bold text-[#00A106]">You just took a step towards making a positive impact.</h4>
+
             </div>
         </div>
     )
