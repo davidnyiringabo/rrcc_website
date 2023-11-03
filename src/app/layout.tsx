@@ -13,12 +13,6 @@ const poppins = Poppins({
   weight:['100','200','300','400','500','600','700','800','900'] 
 })
 
-// export const metadata: Metadata = {
-//   title: 'RCA Red Cross',
-//   description: 'This is the website for red cross website.',
-//   icons: logo
-// }
-
 export default function RootLayout({
   children,
 }: {
@@ -26,6 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="logo.svg" type="image/svg" />
+        <title>RCA Red Cross</title>
+      </head>
       <body className={poppins.className + "w-screen"}>
       <Next13ProgressBar color="red" height={'3px'} />
         <Navbar/>
