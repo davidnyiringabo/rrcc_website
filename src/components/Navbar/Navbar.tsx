@@ -8,10 +8,10 @@ import { useState } from "react"
 const Navbar = ()=>{
     const [activeTab, setActiveTab] = useState("home")
     return(
-        <div className="w-full px-3 py-1 flex items-center  justify-between border-b-[1px] border-[#ccc]">
+        <div className="w-full px-10 py-1 flex items-center  justify-between border-b-[1px] border-[#ccc]">
             <Image src={logo} alt="" className="w-24 h-16"/>
 
-            <div className="hidden md:flex gap-7 items-center">
+            <div className="hidden md:flex gap-9 items-center">
                 <Link onClick={()=> setActiveTab("home")} href={"/"} className={`${activeTab == "home" ? "font-bold" : " text-[#ccc]"} text-[100%] font-medium`}>Home
                     {activeTab == "home" ? <Image src={dots} alt="" className="w-3 mb-[-6px] text-center mx-auto"/> : <></>}
                 </Link>
