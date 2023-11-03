@@ -19,7 +19,6 @@ const Navbar = ()=>{
             </div>
 
             <Link href={"/join"} className="hidden md:flex px-5 h-[2.8rem] bg-[#CC0000] text-white items-center justify-center rounded-lg">Join us</Link>
-
         </div>
     )
 }
