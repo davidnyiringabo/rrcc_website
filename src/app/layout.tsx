@@ -5,6 +5,8 @@ import { Poppins } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
 import logo from "@/assets/logo.svg"
 import NextNProgress from 'nextjs-progressbar';
+import { Next13ProgressBar } from 'next13-progressbar'
+import Footer from '@/components/Footer'
 
 const poppins = Poppins({ 
   subsets: ['latin'], 
@@ -25,9 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className + "w-screen"}>
-      <NextNProgress color="#29D" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+      <Next13ProgressBar color="red" height={'3px'} />
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   )
