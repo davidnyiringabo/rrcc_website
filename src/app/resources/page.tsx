@@ -8,6 +8,7 @@ import img5 from "@/assets/Rectangle 48 (5).png"
 import img6 from "@/assets/Rectangle 48 (6).png"
 import img7 from "@/assets/Rectangle 48 (7).png"
 import Image from "next/image"
+import FAQsPage from "@/components/FAQs/index"
 
 const ActivitiesPage = ()=>{
     const gallery = [
@@ -77,8 +78,16 @@ const ActivitiesPage = ()=>{
                 <h5 className="my-2 font-bold mb-5">See what we have accomplished through your help.</h5>
 
                 <div className="flex flex-col md:grid grid-cols-4 gap-x-5 gap-y-4">
-                    {}
+                    {gallery.map((item)=>{
+                        return(
+                            <div className="w-full h-full rounded-lg relative cursor-pointer">
+                                <Image src={item.image} alt="" className="w-full h-full rounded-lg bg-cover"/>
+                                <h6 className="p-3 absolute bottom-0 text-[70%] text-white font-extrabold h-[30%] bg-[#0000006b] rounded-b-lg hover:h-full">{item.text}</h6>
+                            </div>
+                        )
+                    })}
                 </div>
+                <FAQsPage/>
             </div>
         </div>
     )
