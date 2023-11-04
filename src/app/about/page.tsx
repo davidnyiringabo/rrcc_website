@@ -8,6 +8,7 @@ const AboutPage = ()=>{
             <p  className="w-full mb-2 my-3 text-[80%] font-light text-[#1E1E1E]">The club's mission is aligned with the broader mission of the Red Cross, which is to alleviate human suffering and protect human dignity. The club serves as a platform for students and community members to learn, volunteer, and take action on humanitarian initiatives.</p>
 
             <ImagesGroup/>
+            <h4 className="text-[180%] font-extrabold mb-5 mt-6">Our <span className="text-[100%] border-b-[3px] border-[#CC0000] text-green-700 hover:bg-[#CC0000] hover:p-1 hover:pb-0 hover:text-white hover:cursor-pointer">Goals</span></h4>
         </div>
     )
 }
