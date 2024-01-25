@@ -10,7 +10,7 @@ const Navbar = ()=>{
     const activeTab = usePathname();
     
     return(
-        <div className="w-full px-10 py-1 flex items-center  justify-between border-b-[1px] border-[#ccc]">
+        <div className="w-full px-10 py-4 flex items-center  justify-between border-b-[1px] border-[#ccc]">
             <Image src={logo} alt="" className="w-24 h-16"/>
 
             <div className="hidden md:flex md:gap-14 items-center">
@@ -31,7 +31,7 @@ const Navbar = ()=>{
                 </Link>
             </div>
 
-            <Link href={"/join"} className="hidden text-[90%] md:flex px-6 h-[2.8rem] bg-[#CC0000] text-white items-center justify-center rounded-lg">Join us</Link>
+            <Link href={"/join"} className="hidden text-[80%] md:flex px-6 h-[2.4rem] bg-[#CC0000] text-white items-center justify-center rounded-md">Join us</Link>
         </div>
     )
 }
