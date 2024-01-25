@@ -3,7 +3,7 @@ import flag from "@/assets/flag.png"
 
 const Hero = ()=>{
     return(
-        <div className="w-[100%] py-5 flex flex-col md:flex-row items-center md:items-start justify-between py-10 pt-10">
+        <div className="w-[100%] py-5 flex flex-col md:flex-row items-center md:items-start justify-between py-20 pt-10">
             <div className="w-full md:w-[50%]">
                 <h1 className="text-[180%] font-extrabold mb-5">Save a <span className="border-b-[3px] border-red-900 text-[100%] text-[#00A106]  border-[#CC0000] text-green-700 hover:bg-[#CC0000] hover:p-1 hover:pb-0 hover:text-white hover:cursor-pointer font-extrabold">Life</span> Today</h1>
 

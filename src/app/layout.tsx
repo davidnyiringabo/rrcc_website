@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="logo.svg" type="image/svg" />
+        <link rel="shortcut icon" href="/logo.png" type="image/png" />
         <title>RCA Red Cross</title>
       </head>
       <body className={poppins.className + "w-screen"}>

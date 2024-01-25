@@ -4,32 +4,34 @@ import dots from "@/assets/dots.png"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 
 const Navbar = ()=>{
-    const [activeTab, setActiveTab] = useState("home")
+    const activeTab = usePathname();
+    
     return(
         <div className="w-full px-10 py-1 flex items-center  justify-between border-b-[1px] border-[#ccc]">
             <Image src={logo} alt="" className="w-24 h-16"/>
 
-            <div className="hidden md:flex gap-9 items-center">
-                <Link onClick={()=> setActiveTab("home")} href={"/"} className={`${activeTab == "home" ? "font-bold" : " text-[#ccc]"} text-[100%] font-medium`}>Home
-                    {activeTab == "home" ? <Image src={dots} alt="" className="w-3 mb-[-6px] text-center mx-auto"/> : <></>}
+            <div className="hidden md:flex md:gap-14 items-center">
+                <Link href={"/"} className={`${activeTab == "/" ? "font-bold text-black" : " text-[#646464] font-medium"} text-[90%]`}>Home
+                    {activeTab == "/" ? <Image src={dots} alt="" className="w-3 mb-[-6px] text-center mx-auto"/> : <></>}
                 </Link>
-                <Link onClick={()=> setActiveTab("activities")} href={"/activities"} className={`${activeTab == "activities" ? "font-medium" : " text-[#ccc]"} text-[100%] font-medium`}>Activities
-                    {activeTab == "activities" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
+                <Link href={"/activities"} className={`${activeTab == "/activities" ? "font-bold" : " text-[#646464] font-medium"} text-[90%]`}>Activities
+                    {activeTab == "/activities" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
                 </Link>
-                <Link onClick={()=> setActiveTab("resources")} href={"/resources"} className={`${activeTab == "resources" ? "font-medium" : " text-[#ccc]"} text-[100%] font-medium`}>Resources
-                    {activeTab == "resources" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
+                <Link href={"/resources"} className={`${activeTab == "/resources" ? "font-bold" : " text-[#646464] font-medium"} text-[90%]`}>Resources
+                    {activeTab == "/resources" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
                 </Link>
-                <Link onClick={()=> setActiveTab("about")} href={"/about"} className={`${activeTab == "about" ? "font-medium" : " text-[#ccc]"} text-[100%] font-medium`}>About us
-                    {activeTab == "about" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
+                <Link href={"/about"} className={`${activeTab == "/about" ? "font-bold" : " text-[#646464] font-medium"} text-[90%]`}>About us
+                    {activeTab == "/about" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
                 </Link>
-                <Link onClick={()=> setActiveTab("contact")} href={"/contact"} className={`${activeTab == "contact" ? "font-medium" : " text-[#ccc]"} text-[100%] font-medium`}>Contact us
-                    {activeTab == "contact" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
+                <Link href={"/contact"} className={`${activeTab == "/contact" ? "font-bold" : " text-[#646464] font-medium"} text-[90%]`}>Contact us
+                    {activeTab == "/contact" ? <Image src={dots} alt="" className="w-3 mb-[-6px]  mx-auto"/> : <></>}
                 </Link>
             </div>
 
-            <Link href={"/join"} className="hidden md:flex px-5 h-[2.8rem] bg-[#CC0000] text-white items-center justify-center rounded-lg">Join us</Link>
+            <Link href={"/join"} className="hidden text-[90%] md:flex px-6 h-[2.8rem] bg-[#CC0000] text-white items-center justify-center rounded-lg">Join us</Link>
         </div>
     )
 }
