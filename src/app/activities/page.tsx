@@ -1,6 +1,9 @@
 import SwapContainer from "@/components/Swap"
 import img from "@/assets/undraw_collaborators_re_hont 1.png"
 import Program from "@/components/Program"
+import Link from "next/link"
+
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 const ActivitiesPage = ()=>{
     const programs = [
@@ -51,11 +54,17 @@ const ActivitiesPage = ()=>{
                         )
                     })}
                 </div>
+                <div className="w-full flex justify-end px-10 mt-2">
+                    <Link href={"/activities"} className="flex items-center underline">
+                        <MdOutlineArrowRightAlt/>
+                        <h6 className="text-[60%] font-bold">View More</h6>
+                    </Link>
+                </div>
             </div>
 
             <div className="my-20 w-full flex flex-col items-center">
-                <h4 className="text-[140%] font-bold text-[#00A106]">You just took a step towards making a positive impact.</h4>
-                <p className="text-[120%] w-[95%] md:w-[40%] text-center my-6 font-light text-[#000000cb]">Explore our various programs and learn about our volunteer opportunities, and discover how you can contribute to saving the lives of many.</p>
+                <h4 className="text-[160%] font-bold text-[#00A106]">You just took a step towards making a positive impact.</h4>
+                <p className="text-[120%] w-[95%] md:w-[60%] text-justify my-6 font-light text-[#000000cb]">Explore our various programs and learn about our volunteer opportunities, and discover how you can contribute to saving the lives of many.</p>
                 <p className="text-[120%] w-[95%] md:w-[40%] text-center my-6 font-light text-[#000000cb]">Explore our various programs and learn about our volunteer opportunities, and discover how you can contribute to saving the lives of many.</p>
                 <h4 className="text-[140%] font-bold text-[#00A106]">You just took a step towards making a positive impact.</h4>
 
