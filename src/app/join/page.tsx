@@ -1,8 +1,33 @@
+"use client"
+
 import logo from "@/assets/logo.png";
 import logo1 from "@/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import {useState} from "react"
+
 const ActivitiesPage = () => {
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    email:"",
+    phone:"",
+})
+const submit = (e: any) =>{
+    e.preventDefault();
+    console.log(formData)
+    setFormData({
+        email:"",
+        phone:"",
+    })
+}
+
+const handleChange = (e:any) =>{
+    const {name, value} = e.target;
+    setFormData((prevState)=>({
+        ...prevState,
+        [name]: value
+    }))
+}
   return (
     <div className="w-full md:h-[100vh] flex justify-between ">
       <div className="w-[48%] h-full relative bg-[#017B06] rounded-r-[27px]">
@@ -30,7 +55,7 @@ const ActivitiesPage = () => {
           </h6>
         </header>
 
-        <form className="md:w-[70%] flex md:mt-[10vh] flex-col items-center gap-4">
+        <form onSubmit={submit} className="md:w-[70%] flex md:mt-[10vh] flex-col items-center gap-4">
           <div className="w-full flex flex-col gap-1">
             <label htmlFor="email" className="text-[80%] font-semibold">
               Email
@@ -40,18 +65,22 @@ const ActivitiesPage = () => {
               name="email"
               id="email"
               placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
               className="activity-input text-[80%] border-[1.4px] border-black font-light outline-none  px-5 py-3"
             />
           </div>
           <div className="w-full flex flex-col gap-1">
-            <label htmlFor="email" className="text-[80%] font-semibold">
+            <label htmlFor="phone" className="text-[80%] font-semibold">
               Phone Number
             </label>
             <input
-              type="email"
-              name="email"
-              id="email"
+              type="text"
+              name="phone"
+              id="phone"
               placeholder="Your Phone Number"
+              value={formData.phone}
+              onChange={handleChange}
               className="activity-input text-[80%] border-[1.4px] border-black font-light outline-none  px-5 py-3"
             />
           </div>
