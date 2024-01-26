@@ -1,4 +1,6 @@
 import ImagesGroup from "@/components/ImagesGroup"
+import Goal from "@/components/ImagesGroup/Goal"
+import { programs } from "@/constants"
 
 const AboutPage = ()=>{
     return(
@@ -9,7 +11,16 @@ const AboutPage = ()=>{
 
             <ImagesGroup/>
             <h4 className="text-[180%] font-extrabold mb-5 mt-6">Our <span className="text-[100%] border-b-[3px] border-[#CC0000] text-green-700 hover:bg-[#CC0000] hover:p-1 hover:pb-0 hover:text-white hover:cursor-pointer">Goals</span></h4>
+            <div className="w-[95%] mx-auto flex flex-col md:grid grid-cols-2 gap-x-6 gap-y-6 items-center">
+                    {programs.map((pro)=>{
+                        return(
+                            <Goal image={pro.icon} title={pro.head} content={pro.content}/>
+                        )
+                    })}
+            </div>
         </div>
+
+
     )
 }
 

@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@600&display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@700&family=Nunito:wght@600&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@500&family=Nunito:wght@600&display=swap" rel="stylesheet"/>
         <link rel="shortcut icon" href="/logo.png" type="image/png" />
         <title>RCA Red Cross</title>
       </head>

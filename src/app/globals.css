@@ -17,6 +17,6 @@
     background-color: green;
 }
 
-.activity-input:active::placeholder{
+.activity-input :active ::placeholder{
     margin-top: -20px;
 }

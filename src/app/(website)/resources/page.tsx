@@ -46,14 +46,30 @@ const ActivitiesPage = ()=>{
             <div className="w-full md:w-[60%]">
                 <p className="">Always wanted to learn how to deliver first aid to those in need? Here’s a simple step by step guide to learning how to perform first aid to check a person.</p>
                 <h4 className="text-[150%] font-bold my-4 mt-8">Steps:</h4>
-                    <h6 className="my-6"> <span className="py-2 px-4 rounded-[100%] bg-[#FFB6B680] ">1</span> CHECK the scene for safety, obtain consent, and use PPE.</h6>
-                    <h6 className="my-6"> <span className="py-2 px-4 rounded-[100%] bg-[#FFB6B680] ">2</span> CHECK for responsiveness, breathing, bleeding or other conditions using shout-tap-shout.</h6>
-                    <h6 className="my-6"> <span className="py-2 px-4 rounded-[100%] bg-[#FFB6B680] ">3</span> For a person who is unresponsive and not breathing, start CPR and use an AED immediately.</h6>
-                    <h6 className="my-6"> <span className="py-2 px-4 rounded-[100%] bg-[#FFB6B680] ">4</span> If the person is responsive and is fully awake: <br/>
-                        <span className="ml-20"/>&#x2714; Do not ask the person to move any area of the body that causes discomfort or pain.<br/>
-                        <span className="ml-20"/>&#x2714; Take note of any medical identification tags.
-                    </h6>
-                    <h6 className="my-6"> <span className="py-2 px-4 rounded-[100%] bg-[#FFB6B680] ">5</span> After completing the CHECK step, CALL 911 and get equipment. Then, give CARE based on the condition found and your level of training</h6>
+                    <div className="flex items-start gap-3 my-2">
+                        <span className="w-[2rem] h-[2rem] flex items-center justify-center rounded-[100%] bg-[#FFB6B680] ">1</span>
+                        <h6> CHECK the scene for safety, obtain consent, and use PPE.</h6>
+                    </div>
+                    <div className="flex items-start gap-3 my-2">
+                        <span className="w-[2rem] h-[2rem] flex items-center justify-center rounded-[100%] bg-[#FFB6B680] ">2</span>
+                        <h6> CHECK for responsiveness, breathing, bleeding or other conditions using shout-tap-shout.</h6>
+                    </div>
+                    <div className="flex items-start gap-3 my-2">
+                        <span className="w-[2rem] h-[2rem] flex items-center justify-center rounded-[100%] bg-[#FFB6B680] ">3</span>
+                        <h6> For a person who is unresponsive and not breathing, start CPR and use an AED immediately.</h6>
+                    </div>
+                    <div className="flex items-start gap-3 my-2">
+                        <span className="w-[2rem] h-[2rem] flex items-center justify-center rounded-[100%] bg-[#FFB6B680] ">4</span>
+                        <h6 className="text-start"> If the person is responsive and is fully awake: <br/>
+                            <span className="ml-2"/>&#x2714; Do not ask the person to move any area of the body that causes discomfort or pain.<br/>
+                            <span className="ml-2"/>&#x2714; Take note of any medical identification tags.
+                        </h6>
+                    </div>
+                    <div className="flex items-start gap-3 my-2">
+                        <span className="w-[2rem] h-[2rem] flex items-center justify-center rounded-[100%] bg-[#FFB6B680] ">5</span>
+                        <h6>After completing the CHECK step, CALL 911 and get equipment. Then, give CARE based on the condition found and your level of training</h6>
+                    </div>
+                    
             </div>
 
             <div className="w-[100%] py-5 flex flex-col md:flex-row items-center md:items-start justify-between py-10 pt-10">
@@ -81,8 +97,8 @@ const ActivitiesPage = ()=>{
                     {gallery.map((item)=>{
                         return(
                             <div className="w-full h-full rounded-lg relative cursor-pointer">
-                                <Image src={item.image} alt="" className="w-full h-full rounded-lg bg-cover"/>
-                                <h6 className="p-3 absolute bottom-0 text-[70%] text-white font-extrabold h-[30%] bg-[#0000006b] rounded-b-lg hover:h-full">{item.text}</h6>
+                                <Image src={item.image} alt="" className="w-full h-full rounded-lg object-cover"/>
+                                <h6 className="px-3 pt-1 absolute bottom-0 text-[60%] text-white text-justify font-bold h-[34%] leading-3 bg-[#0000006b] rounded-b-lg pb-2">{item.text}</h6>
                             </div>
                         )
                     })}
