@@ -29,7 +29,7 @@ export default function RootLayout({
         <title>RCA Red Cross</title>
       </head>
       <body className={poppins.className + "w-screen"}>
-      <Next13ProgressBar color="red" height={'3px'} />
+        <Next13ProgressBar color="red" height={'3px'} />
         <Navbar/>
         {children}
         <Footer/>
