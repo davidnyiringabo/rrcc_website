@@ -8,7 +8,7 @@ import img6 from "@/assets/Rectangle 48 (4).png"
 
 const ImagesGroup = ()=>{
     return(
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-5 mt-10">
             <div className="w-full">
                 <Image src={img1} alt="" className="w-full h-[26vh] rounded"/>
                 <Image src={img2} alt="" className="w-[80%] h-[26vh] my-4 rounded"/>

@@ -1,8 +1,10 @@
 
 const ActivitiesPage = ()=>{
     return(
-        <div className="w-full flex justify-center ">
-            <h5>This is the join us page</h5>
+        <div className="w-full md:h-[100vh] flex justify-between ">
+            <div className="w-[48%] h-full relative bg-[#017B06] rounded-t">
+
+            </div>
         </div>
     )
 }
