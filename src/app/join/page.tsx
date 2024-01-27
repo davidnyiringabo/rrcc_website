@@ -1,33 +1,33 @@
-"use client"
+"use client";
 
 import logo from "@/assets/logo.png";
 import logo1 from "@/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import {useState} from "react"
+import { useState } from "react";
 
 const ActivitiesPage = () => {
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
-    email:"",
-    phone:"",
-})
-const submit = (e: any) =>{
+    email: "",
+    phone: "",
+  });
+  const submit = (e: any) => {
     e.preventDefault();
-    console.log(formData)
+    console.log(formData);
     setFormData({
-        email:"",
-        phone:"",
-    })
-}
+      email: "",
+      phone: "",
+    });
+  };
 
-const handleChange = (e:any) =>{
-    const {name, value} = e.target;
-    setFormData((prevState)=>({
-        ...prevState,
-        [name]: value
-    }))
-}
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   return (
     <div className="w-full md:h-[100vh] flex justify-between ">
       <div className="w-[48%] h-full relative bg-[#017B06] rounded-r-[27px]">
@@ -55,7 +55,10 @@ const handleChange = (e:any) =>{
           </h6>
         </header>
 
-        <form onSubmit={submit} className="md:w-[70%] flex md:mt-[10vh] flex-col items-center gap-4">
+        <form
+          onSubmit={submit}
+          className="md:w-[70%] flex md:mt-[10vh] flex-col items-center gap-4"
+        >
           <div className="w-full flex flex-col gap-1">
             <label htmlFor="email" className="text-[80%] font-semibold">
               Email

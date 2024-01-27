@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="w-full px-10 py-4 flex items-center  justify-between border-b-[1px] border-[#ccc]">
       <Image src={logo} alt="" className="w-24 h-16" />
 
-      <div className="hidden md:flex md:gap-14 items-center">
+      <div className="hidden md:flex md:gap-[4vw] items-center">
         <Link
           href={"/"}
           className={`${

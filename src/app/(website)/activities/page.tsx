@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { programs } from "@/constants";
+// import Swipper from "@/components/Swipper";
 
 const ActivitiesPage = () => {
   return (
@@ -25,7 +26,7 @@ const ActivitiesPage = () => {
         sense of social responsibility among students, preparing them to be
         active and engaged members of their communities.
       </p>
-      <SwapContainer />
+      {/* <Swipper /> */}
 
       <div>
         <h4 className="text-[180%] mb-5 mt-7 font-extrabold">
